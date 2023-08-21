@@ -1,0 +1,44 @@
+{
+	"compilerOptions": {
+		"target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+		"lib": [
+			"DOM",
+			"DOM.Iterable",
+			"ESNext"
+		] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
+		"jsx": "react" /* 将JSX转换为React代码。 */,
+		"experimentalDecorators": true /* Enable experimental support for TC39 stage 2 draft decorators. */,
+		"emitDecoratorMetadata": true /* Emit design-type metadata for decorated declarations in source files. */,
+
+		"declaration": true, // 为我们的库类型输出一个.d.ts文件
+		"declarationDir": "types", // 将.d.ts文件放在哪里，我们放在输出目录 outDir 下的types里
+		"sourceMap": true, // 将JS代码映射回其TS文件源进行调试
+		"outDir": "dist", // tsc 打包产物存放的目录
+		"emitDeclarationOnly": true, // 只生成声明.d.ts文件，而不会生成js文件
+
+		/* Modules */
+		"module": "ESNext" /* Specify what module code is generated. */,
+		"moduleResolution": "node" /* Specify how TypeScript looks up a file from a given module specifier. */,
+		"resolveJsonModule": true /* Enable importing .json files */,
+
+		/* JavaScript Support */
+		"allowJs": true /* Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. */,
+
+		/* Emit */
+		// "noEmit": true, // 不输出文件，只做类型检查                                /* Disable emitting files from a compilation. */
+
+		/* Interop Constraints */
+		"isolatedModules": true /* Ensure that each file can be safely transpiled without relying on other imports. */,
+		"allowSyntheticDefaultImports": true /* Allow 'import x from y' when a module doesn't have a default export. */,
+		"esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */,
+		"forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+
+		/* Type Checking */
+		"strict": true /* Enable all strict type-checking options. */,
+
+		/* Completeness */
+		"skipLibCheck": true /* Skip type checking all .d.ts files. */
+	},
+	"include": ["./src/**/*"],
+	"exclude": ["node_modules"]
+}

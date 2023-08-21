@@ -20,7 +20,7 @@ pnpm init
 
 packages:
 
-- 'packages/\*'
+- 'apps/\*'
 
 ---
 

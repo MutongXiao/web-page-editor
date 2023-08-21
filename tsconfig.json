@@ -1,6 +1,6 @@
 {
 	"compileOnSave": true,
-	"include": ["./packages/**/*"],
+	"include": ["./apps/**/*"],
 	"compilerOptions": {
 		"target": "ESNext",
 		"useDefineForClassFields": true,
@@ -17,6 +17,6 @@
 		"noUnusedParameters": false,
 		"noImplicitReturns": false,
 		"skipLibCheck": true,
-		"baseUrl": "./packages"
+		"baseUrl": "./apps"
 	}
 }
