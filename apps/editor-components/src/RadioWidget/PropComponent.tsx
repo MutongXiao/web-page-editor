@@ -2,7 +2,7 @@ import React, { FC, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 import { Form, Input, Checkbox, Select, Button, Space } from 'antd';
 import { PlusOutlined, MinusCircleOutlined } from '@ant-design/icons';
-import type { RadioWidgetProps, RadioWidgetOptionType } from './interface';
+import type { RadioWidgetProps, RadioWidgetOption } from './interface';
 
 const PropComponent: FC<RadioWidgetProps> = (props: RadioWidgetProps) => {
 	const { title, isVertical, value, options = [], onChange, disabled } = props;
@@ -65,7 +65,7 @@ const PropComponent: FC<RadioWidgetProps> = (props: RadioWidgetProps) => {
 													validator: (_, text) => {
 														const { options = [] } = form.getFieldsValue();
 														let num = 0;
-														options.forEach((opt: RadioWidgetOptionType) => {
+														options.forEach((opt: RadioWidgetOption) => {
 															if (opt.text === text) num++; // 记录 text 相同的个数，预期只有 1 个（自己）
 														});
 														if (num === 1) return Promise.resolve();

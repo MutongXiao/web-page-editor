@@ -2,14 +2,14 @@ import Component, { textareaWidgetDefaultProps } from './Component';
 import PropComponent from './PropComponent';
 
 type InternalTextareaWidgettType = typeof Component;
-type ComponentConf = InternalTextareaWidgettType & {
+export type TextareaWidgetConf = InternalTextareaWidgettType & {
 	title: string;
 	widgetName: string;
 	defaultProps: typeof textareaWidgetDefaultProps;
 	PropComponent: typeof PropComponent;
 };
 
-const TextareaWidget = Component as ComponentConf;
+const TextareaWidget = Component as TextareaWidgetConf;
 TextareaWidget.title = '多行输入';
 TextareaWidget.widgetName = 'TextareaWidget';
 TextareaWidget.defaultProps = textareaWidgetDefaultProps;

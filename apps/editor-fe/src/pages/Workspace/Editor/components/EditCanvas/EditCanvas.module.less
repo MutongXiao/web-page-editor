@@ -1,0 +1,29 @@
+.canvas {
+  min-height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.component-wrapper {
+  padding: 12px;
+  margin: 12px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+
+  &:hover {
+    border-color: #d9d9d9;
+  }
+}
+
+.selected {
+  border-color: #1890ff !important;
+}
+
+.locked {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.component {
+  pointer-events: none; // 屏蔽鼠标行为，组件不让被点击到
+}

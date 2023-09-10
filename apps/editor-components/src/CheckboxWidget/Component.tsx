@@ -24,7 +24,7 @@ const Component: FC<CheckboxWidgetProps> = (props: CheckboxWidgetProps) => {
 	return (
 		<div>
 			<Paragraph strong>{title}</Paragraph>
-			<Space direction={isVertical ? 'vertical' : 'horizontal'}>
+			<Space direction={isVertical ? 'vertical' : 'horizontal'} wrap>
 				{list.map((opt) => {
 					const { value, text, checked } = opt;
 					return (

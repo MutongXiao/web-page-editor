@@ -1,0 +1,13 @@
+.c-shadow-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.c-shadow-item span {
+  width: 28%;
+}
+
+.c-shadow-component {
+  width: 70%;
+}

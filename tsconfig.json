@@ -1,6 +1,5 @@
 {
 	"compileOnSave": true,
-	"include": ["./apps/**/*"],
 	"compilerOptions": {
 		"target": "ESNext",
 		"useDefineForClassFields": true,
@@ -17,6 +16,11 @@
 		"noUnusedParameters": false,
 		"noImplicitReturns": false,
 		"skipLibCheck": true,
-		"baseUrl": "./apps"
-	}
+		"baseUrl": "./",
+		"paths": {
+			"@mutongxiao/editor-components/*": ["./editor-components/src/*"]
+		}
+	},
+	"include": ["apps/**/*.tsx", "apps/**/*.ts"],
+	"exclude": ["node_modules", "dist"]
 }

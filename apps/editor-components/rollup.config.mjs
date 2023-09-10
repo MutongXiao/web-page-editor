@@ -29,13 +29,14 @@ export default [
 		plugins: [
 			resolve(),
 			commonjs(),
+			// 读取 ./tsconfig.json 的配置做 ts 编译解析
 			typescript({ tsconfig: './tsconfig.json' }),
 			postcss()
 		],
 		external: ['react', 'antd', '@ant-design/icons']
 	},
 	{
-		// 类型 esm ts 类型打包入口
+		// esm 产物的 ts 类型文件入口
 		input: './dist/esm/types/index.d.ts',
 		output: [{ file: './dist/index.d.ts', format: 'esm' }],
 		plugins: [dts()],

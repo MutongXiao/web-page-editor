@@ -2,19 +2,19 @@ import Component, { infoWidgetDefaultProps } from './Component';
 import PropComponent from './PropComponent';
 
 type InternalInfoWidgeType = typeof Component;
-type ComponentConf = InternalInfoWidgeType & {
+export type InfoWidgetConf = InternalInfoWidgeType & {
 	title: string;
 	widgetName: string;
 	defaultProps: typeof infoWidgetDefaultProps;
 	PropComponent: typeof PropComponent;
 };
 
-const InfoWidge = Component as ComponentConf;
-InfoWidge.title = '页面信息';
-InfoWidge.widgetName = 'InfoWidge';
-InfoWidge.defaultProps = infoWidgetDefaultProps;
-InfoWidge.PropComponent = PropComponent;
+const InfoWidget = Component as InfoWidgetConf;
+InfoWidget.title = '页面信息';
+InfoWidget.widgetName = 'InfoWidget';
+InfoWidget.defaultProps = infoWidgetDefaultProps;
+InfoWidget.PropComponent = PropComponent;
 
 export * from './interface';
 
-export default InfoWidge;
+export default InfoWidget;

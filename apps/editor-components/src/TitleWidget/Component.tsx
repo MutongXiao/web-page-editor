@@ -1,6 +1,7 @@
 import React, { type FC } from 'react';
 import { Typography } from 'antd';
-import type { TitleWidgetProps } from './interface';
+import type { TitleWidgetProps, TitleWidgetSpacialStyle } from './interface';
+import { defaultCommonWidgetStyle } from '../common/commonStyleProps';
 
 export const titleWidgetDefaultProps: TitleWidgetProps = {
 	text: '一行标题',
@@ -9,6 +10,20 @@ export const titleWidgetDefaultProps: TitleWidgetProps = {
 };
 
 const { Title } = Typography;
+
+export const textDefaultProps: TitleWidgetSpacialStyle = {
+	// basic props - font styles
+	fontSize: '14px',
+	fontFamily: '',
+	fontWeight: 'normal',
+	fontStyle: 'normal',
+	textDecoration: 'none',
+	lineHeight: '1',
+	textAlign: 'left',
+	color: '#000000',
+	backgroundColor: '',
+	...defaultCommonWidgetStyle
+};
 
 const TitleWidget: FC<TitleWidgetProps> = (props: TitleWidgetProps) => {
 	const {

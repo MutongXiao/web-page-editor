@@ -2,14 +2,14 @@ import Component, { paragraphWidgetDefaultProps } from './Component';
 import PropComponent from './PropComponent';
 
 type InternalParagraphWidgetType = typeof Component;
-type ComponentConf = InternalParagraphWidgetType & {
+export type ParagraphWidgetConf = InternalParagraphWidgetType & {
 	title: string;
 	widgetName: string;
 	defaultProps: typeof paragraphWidgetDefaultProps;
 	PropComponent: typeof PropComponent;
 };
 
-const ParagraphWidget = Component as ComponentConf;
+const ParagraphWidget = Component as ParagraphWidgetConf;
 ParagraphWidget.title = '段落';
 ParagraphWidget.widgetName = 'ParagraphWidget';
 ParagraphWidget.defaultProps = paragraphWidgetDefaultProps;

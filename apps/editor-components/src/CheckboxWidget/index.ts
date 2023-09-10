@@ -3,7 +3,7 @@ import PropComponent from './PropComponent';
 import StatComponent from './StatComponent';
 
 type InternalCheckboxWidgetType = typeof Component;
-type ComponentConf = InternalCheckboxWidgetType & {
+export type CheckboxWidgetConf = InternalCheckboxWidgetType & {
 	title: string;
 	widgetName: string;
 	defaultProps: typeof checkboxWidgetDefaultProps;
@@ -11,7 +11,7 @@ type ComponentConf = InternalCheckboxWidgetType & {
 	StatComponent: typeof StatComponent;
 };
 
-const CheckboxWidget = Component as ComponentConf;
+const CheckboxWidget = Component as CheckboxWidgetConf;
 CheckboxWidget.title = '多选';
 CheckboxWidget.widgetName = 'CheckboxWidget';
 CheckboxWidget.defaultProps = checkboxWidgetDefaultProps;

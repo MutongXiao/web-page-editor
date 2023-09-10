@@ -2,22 +2,20 @@ import Component, { titleWidgetDefaultProps } from './Component';
 import PropComponent from './PropComponent';
 
 type InternalTitleWidgetType = typeof Component;
-type ComponentConf = InternalTitleWidgetType & {
+export type TitleWidgetConf = InternalTitleWidgetType & {
 	title: string;
 	widgetName: string;
 	defaultProps: typeof titleWidgetDefaultProps;
 	PropComponent: typeof PropComponent;
 };
 
-const TitleWidget = Component as ComponentConf;
+const TitleWidget = Component as TitleWidgetConf;
 TitleWidget.title = '标题';
-TitleWidget.widgetName = 'TITLE_WIDGET';
+TitleWidget.widgetName = 'TitleWidget';
 TitleWidget.defaultProps = titleWidgetDefaultProps;
 TitleWidget.PropComponent = PropComponent;
 
 export * from './interface';
-// export type {
-// };
 
 // Title 组件的配置
 export default TitleWidget;

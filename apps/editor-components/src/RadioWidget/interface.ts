@@ -1,4 +1,4 @@
-export type RadioWidgetOptionType = {
+export type RadioWidgetOption = {
 	value: string;
 	text: string;
 };
@@ -6,7 +6,7 @@ export type RadioWidgetOptionType = {
 export type RadioWidgetProps = {
 	title?: string;
 	isVertical?: boolean;
-	options?: RadioWidgetOptionType[];
+	options?: RadioWidgetOption[];
 	value?: string;
 
 	// 用于 PropComponent
@@ -15,6 +15,6 @@ export type RadioWidgetProps = {
 };
 
 // 统计组件的属性类型
-export type RadioWidgetStatPropsType = {
+export type RadioWidgetStatProps = {
 	stat: Array<{ name: string; count: number }>;
 };

@@ -1,0 +1,21 @@
+{
+	"name": "@mutongxiao/editor-mock-server",
+	"version": "1.0.0",
+	"description": "页面编辑器，模拟服务端",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"koa": "^2.14.2",
+		"koa-router": "^12.0.0",
+		"mockjs": "^1.1.0"
+	},
+	"devDependencies": {
+		"nodemon": "^3.0.1"
+	}
+}

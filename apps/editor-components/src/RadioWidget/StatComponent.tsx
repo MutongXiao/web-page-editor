@@ -1,6 +1,6 @@
 import React, { FC, useMemo } from 'react';
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
-import type { RadioWidgetStatPropsType } from './interface';
+import type { RadioWidgetStatProps } from './interface';
 
 const STAT_COLORS = [
 	'#FF2D2D',
@@ -15,7 +15,7 @@ function format(n: number) {
 	return (n * 100).toFixed(2);
 }
 
-const StatComponent: FC<RadioWidgetStatPropsType> = ({ stat = [] }) => {
+const StatComponent: FC<RadioWidgetStatProps> = ({ stat = [] }) => {
 	// count 求和
 	const sum = useMemo(() => {
 		let s = 0;

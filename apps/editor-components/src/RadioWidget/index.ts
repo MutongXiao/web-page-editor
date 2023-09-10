@@ -3,7 +3,7 @@ import PropComponent from './PropComponent';
 import StatComponent from './StatComponent';
 
 type InternalRadioWidgetType = typeof Component;
-type ComponentConf = InternalRadioWidgetType & {
+export type RadioWidgetConf = InternalRadioWidgetType & {
 	title: string;
 	widgetName: string;
 	defaultProps: typeof radioWidgetDefaultProps;
@@ -11,7 +11,7 @@ type ComponentConf = InternalRadioWidgetType & {
 	StatComponent: typeof StatComponent;
 };
 
-const RadioWidget = Component as ComponentConf;
+const RadioWidget = Component as RadioWidgetConf;
 RadioWidget.title = '单选';
 RadioWidget.widgetName = 'RadioWidget';
 RadioWidget.defaultProps = radioWidgetDefaultProps;

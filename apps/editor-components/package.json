@@ -1,7 +1,7 @@
 {
 	"name": "@mutongxiao/editor-components",
 	"version": "1.0.0",
-	"description": "",
+	"description": "页面编辑器，组件库",
 	"main": "./dist/cjs/index.js",
 	"module": "./dist/esm/index.js",
 	"types": "./dist/index.d.ts",
